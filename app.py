@@ -112,8 +112,8 @@ with col2:
 # Check if both files have been uploaded
 if content_file and style_file:
     # Display the uploaded images
-    col1.image(content_file, caption='Your Content Image', use_container_width=True)
-    col2.image(style_file, caption='Your Style Image', use_container_width=True)
+    col1.image(content_file, caption='Your Content Image', width='stretch')
+    col2.image(style_file, caption='Your Style Image', width='stretch')
 
     # A button to start the process
     if st.button("Stylize My Image!"):
@@ -127,14 +127,14 @@ if content_file and style_file:
             style_tensor = load_img(style_image_bytes)
 
             # Run the model
-            final_image = run_style_transfer(content_tensor, style_tensor, epochs=10, steps_per_epoch=100) # Reduced for faster web demo
+            final_image = run_style_transfer(content_tensor, style_tensor, epochs=5, steps_per_epoch=50) # Reduced for faster web demo
 
             # Squeeze the batch dimension and convert to a displayable format
             final_image_to_display = np.squeeze(final_image.numpy())
 
         # Display the final image
         st.header("Your DeepStyle Result")
-        st.image(final_image_to_display, caption='Stylized Image', use_container_width=True)
+        st.image(final_image_to_display, caption='Stylized Image', width='stretch')
 
 else:
     st.warning("Please upload both a content and a style image to begin.")
