@@ -127,7 +127,7 @@ if content_file and style_file:
             style_tensor = load_img(style_image_bytes)
 
             # Run the model
-            final_image = run_style_transfer(content_tensor, style_tensor, epochs=5, steps_per_epoch=50) # Reduced for faster web demo
+            final_image = run_style_transfer(content_tensor, style_tensor, epochs=10, steps_per_epoch=100) # Reduced for faster web demo
 
             # Squeeze the batch dimension and convert to a displayable format
             final_image_to_display = np.squeeze(final_image.numpy())
