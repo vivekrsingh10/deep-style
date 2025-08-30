@@ -112,8 +112,8 @@ with col2:
 # Check if both files have been uploaded
 if content_file and style_file:
     # Display the uploaded images
-    col1.image(content_file, caption='Your Content Image', use_column_width=True)
-    col2.image(style_file, caption='Your Style Image', use_column_width=True)
+    col1.image(content_file, caption='Your Content Image', use_container_width=True)
+    col2.image(style_file, caption='Your Style Image', use_container_width=True)
 
     # A button to start the process
     if st.button("Stylize My Image!"):
@@ -134,7 +134,7 @@ if content_file and style_file:
 
         # Display the final image
         st.header("Your DeepStyle Result")
-        st.image(final_image_to_display, caption='Stylized Image', use_column_width=True)
+        st.image(final_image_to_display, caption='Stylized Image', use_container_width=True)
 
 else:
     st.warning("Please upload both a content and a style image to begin.")
