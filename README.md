@@ -1,22 +1,3 @@
-Of course. A great README is crucial for making your project stand out. It's the front page of your work.
-
-Here is a complete, professional README template for your **DeepStyle** project. Just copy and paste this into a new file named `README.md` in your project's root directory.
-
------
-
-### \#\# How to Use This Template
-
-1.  Create a new file named `README.md` in your `deepstyle_project` folder.
-2.  Copy the entire content from the grey box below and paste it into this new file.
-3.  **Crucially:** You'll need to replace the placeholder image links. A simple way to do this is to:
-      * Create a new folder in your project called `assets`.
-      * Put your screenshots and sample images (like `content.jpg`, `style.jpg`, `deepstyle_output.jpg`) into the `assets` folder.
-      * Upload this `assets` folder to your GitHub repository.
-      * Replace the placeholder links like `assets/screenshot.png` with the actual paths to your images on GitHub.
-
------
-
-````markdown
 # DeepStyle: Neural Style Transfer Web App 🎨
 
 A web application built with Python, TensorFlow, and Streamlit that uses deep learning to transfer the artistic style of one image onto the content of another.
